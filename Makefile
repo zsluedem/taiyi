@@ -4,6 +4,12 @@ build:
 test:
 	cargo test
 
+coverage:
+	cargo llvm-cov --all-features --workspace
+
+coverage-report:
+	cargo llvm-cov --all-features --workspace --html
+
 format:
 	cargo +nightly fmt --all
 	cargo sort --workspace --grouped
