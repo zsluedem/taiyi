@@ -7,6 +7,9 @@ test:
 coverage:
 	cargo llvm-cov
 
+coverage-codecov:
+	cargo llvm-cov --codecov --output-path codecov.json
+
 coverage-report:
 	cargo llvm-cov --html
 
